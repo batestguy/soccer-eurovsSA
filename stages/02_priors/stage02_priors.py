@@ -174,12 +174,15 @@ def build_prior_model(frame):
         beta_elo = pm.Normal("beta_elo", mu=1.0, sigma=0.5)
         mu_cc = pm.Normal("mu_cc", mu=0.20, sigma=0.50)
         sigma_cc = pm.HalfNormal("sigma_cc", sigma=0.50)
-        cc_effect = pm.Normal(
-            "cc_effect", mu=mu_cc, sigma=sigma_cc, dims="confederation"
+        # non-centered hierarchical forms (reduce NUTS divergences on small data)
+        cc_raw = pm.Normal("cc_raw", mu=0.0, sigma=1.0, dims="confederation")
+        cc_effect = pm.Deterministic(
+            "cc_effect", mu_cc + sigma_cc * cc_raw, dims="confederation"
         )
         sigma_conf = pm.HalfNormal("sigma_conf", sigma=0.50)
-        conf_offset = pm.Normal(
-            "conf_offset", mu=0.0, sigma=sigma_conf, dims="confederation"
+        conf_raw = pm.Normal("conf_raw", mu=0.0, sigma=1.0, dims="confederation")
+        conf_offset = pm.Deterministic(
+            "conf_offset", sigma_conf * conf_raw, dims="confederation"
         )
 
         for wc_year, group in groups:
