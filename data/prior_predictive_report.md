@@ -1,6 +1,6 @@
 # PRIOR PREDICTIVE REPORT — stage 02
 
-- Generated: 2026-08-15 05:02 UTC
+- Generated: 2026-08-15 05:06 UTC
 - Model frame: 489 team-World Cup rows across 22 editions
 - Outcome likelihood: one categorical World Cup winner per edition (softmax)
 - Prior draws: 600 winner-model draws; 400 GP prior draws
@@ -28,5 +28,5 @@
 - `prior_model_frame.csv`: exact frame used by the prior model
 
 ## Gate notes
-- AFCON 2025 and Gold Cup 2025 remain UNKNOWN in the alignment table; they do
-  not affect prior sampling, but must be resolved before posterior fitting.
+- AFCON 2025 resolved as Morocco and Gold Cup 2025 resolved as Mexico from the
+  pinned match source; both now feed the 2026 alignment table.

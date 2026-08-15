@@ -400,8 +400,8 @@ def main():
         "- `prior_model_frame.csv`: exact frame used by the prior model",
         "",
         "## Gate notes",
-        "- AFCON 2025 and Gold Cup 2025 remain UNKNOWN in the alignment table; they do",
-        "  not affect prior sampling, but must be resolved before posterior fitting.",
+        "- AFCON 2025 resolved as Morocco and Gold Cup 2025 resolved as Mexico from the",
+        "  pinned match source; both now feed the 2026 alignment table.",
     ]
     with open(os.path.join(data_dir, "prior_predictive_report.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(report) + "\n")
