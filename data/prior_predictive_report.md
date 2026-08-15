@@ -1,6 +1,6 @@
 # PRIOR PREDICTIVE REPORT — stage 02
 
-- Generated: 2026-08-15 05:00 UTC
+- Generated: 2026-08-15 05:02 UTC
 - Model frame: 489 team-World Cup rows across 22 editions
 - Outcome likelihood: one categorical World Cup winner per edition (softmax)
 - Prior draws: 600 winner-model draws; 400 GP prior draws
