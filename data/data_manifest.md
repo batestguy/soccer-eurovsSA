@@ -1,6 +1,6 @@
 # DATA MANIFEST — stage 00
 
-- Generated: 2026-08-15 02:44 UTC
+- Generated: 2026-08-15 05:06 UTC
 - Match source: martj42/international_results @ 65d212a
 - Matches: 49,520  (1872-11-30 .. 2026-07-19)
 - Historical canon rows: 23 (WCs 1930-2026; 2026 = prediction target)
@@ -28,7 +28,5 @@ For 2026, UEFA/CONMEBOL/AFC/OFC use the fallback (their trophies are ~23-28 mont
 
 ## Known gaps
 - continental finals flagged UNKNOWN need results filled in before modeling:
-  - African Cup of Nations 2025
-  - Gold Cup 2025
 - Oceania Nations Cup 2020 was cancelled (COVID); no row included.
 - WC 2026 outcome is intentionally absent (prediction target).

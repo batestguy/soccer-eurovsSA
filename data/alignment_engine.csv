@@ -133,7 +133,7 @@ wc_year,wc_start,confederation,tournament,edition,champion,runner_up,final_date,
 2022,2022-11-20,AFC,AFC Asian Cup,2019.0,Qatar,Japan,2019-02-01,45.0,False,True,fallback: no continental final within 18 months
 2026,2026-06-11,UEFA,UEFA Euro,2024.0,Spain,England,2024-07-14,23.0,False,True,fallback: no continental final within 18 months
 2026,2026-06-11,CONMEBOL,Copa América,2024.0,Argentina,Colombia,2024-07-14,23.0,False,True,fallback: no continental final within 18 months
-2026,2026-06-11,CAF,African Cup of Nations,2025.0,UNKNOWN,UNKNOWN,2026-01-18,5.0,True,False,
-2026,2026-06-11,CONCACAF,Gold Cup,2025.0,UNKNOWN,UNKNOWN,2025-07-06,11.0,True,False,
+2026,2026-06-11,CAF,African Cup of Nations,2025.0,Morocco,Senegal,2026-01-18,5.0,True,False,
+2026,2026-06-11,CONCACAF,Gold Cup,2025.0,Mexico,United States,2025-07-06,11.0,True,False,
 2026,2026-06-11,OFC,Oceania Nations Cup,2024.0,New Zealand,Vanuatu,2024-06-30,24.0,False,True,fallback: no continental final within 18 months
 2026,2026-06-11,AFC,AFC Asian Cup,2023.0,Qatar,Jordan,2024-02-10,28.0,False,True,fallback: no continental final within 18 months
