@@ -180,12 +180,15 @@ def main():
     frame = fetch_csv("prior_model_frame.csv")
 
     # Fit the winner model and save immediately after sampling.
+    winner_draws = 80 if fast else 400
+    winner_tune = 80 if fast else 400
+    winner_chains = 1 if fast else 2
     model = stage02["build_prior_model"](frame)
     with model:
         posterior = pm.sample(
-            draws=80 if fast else 400,
-            tune=80 if fast else 400,
-            chains=1 if fast else 2,
+            draws=winner_draws,
+            tune=winner_tune,
+            chains=winner_chains,
             cores=1,
             target_accept=0.96,
             random_seed=20260815,
@@ -249,7 +252,8 @@ def main():
         "",
         f"- Generated: {dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
         f"- Winner-model frame: {len(frame)} rows across {frame['wc_year'].nunique()} editions",
-        f"- Winner-model draws/tune/chains: {100 if fast else 1000}/{100 if fast else 1000}/{1 if fast else 4}",
+        f"- Winner-model draws/tune/chains: {winner_draws}/{winner_tune}/{winner_chains}",
+        f"- Divergences after tuning: {int(np.asarray(posterior.sample_stats['diverging']).sum())}",
         f"- Maximum R-hat: {max_rhat:.3f}",
         f"- Minimum bulk ESS: {min_ess:.1f}",
         "- Posterior was saved immediately after winner-model sampling to `posterior.nc`.",

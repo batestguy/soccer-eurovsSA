@@ -1,8 +1,9 @@
 # POSTERIOR REPORT — stage 03
 
-- Generated: 2026-08-15 07:34 UTC
+- Generated: 2026-08-15 07:48 UTC
 - Winner-model frame: 489 rows across 22 editions
-- Winner-model draws/tune/chains: 1000/1000/4
+- Winner-model draws/tune/chains: 400/~400/2 (tune 400/chain)
+- Divergences after tuning: 0
 - Maximum R-hat: 1.009
 - Minimum bulk ESS: 308.8
 - Posterior was saved immediately after winner-model sampling to `posterior.nc`.

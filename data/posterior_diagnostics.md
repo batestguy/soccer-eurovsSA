@@ -1,8 +1,9 @@
 # POSTERIOR DIAGNOSTICS — stage 03
 
-- Generated: 2026-08-15 06:32 UTC
+- Generated: 2026-08-15 07:48 UTC
 - Maximum R-hat: 1.009
 - Minimum bulk ESS: 308.8
+- Divergences after tuning: 0
 
 ## Summary
 |                       |   mean |    sd |   hdi_3% |   hdi_97% |   mcse_mean |   mcse_sd |   ess_bulk |   ess_tail |   r_hat |
