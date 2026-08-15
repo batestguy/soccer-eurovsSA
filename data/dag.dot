@@ -1,0 +1,10 @@
+digraph dag {
+  rankdir=LR;
+  "confederation" -> "team_strength";
+  "confederation" -> "continental_champion";
+  "team_strength" -> "fifa_ranking";
+  "team_strength" -> "continental_champion";
+  "team_strength" -> "wc_outcome";
+  "fifa_ranking" -> "wc_outcome";
+  "continental_champion" -> "wc_outcome";
+}
