@@ -1,0 +1,147 @@
+confederation,tournament,year,champion,runner_up,final_date
+UEFA,UEFA Euro,1960,Russia,Yugoslavia,1960-07-10
+UEFA,UEFA Euro,1964,Spain,Russia,1964-06-21
+UEFA,UEFA Euro,1968,Italy,Yugoslavia,1968-06-10
+UEFA,UEFA Euro,1972,Germany,Russia,1972-06-18
+UEFA,UEFA Euro,1976,Czechoslovakia,Germany,1976-06-20
+UEFA,UEFA Euro,1980,Germany,Belgium,1980-06-22
+UEFA,UEFA Euro,1984,France,Spain,1984-06-27
+UEFA,UEFA Euro,1988,Netherlands,Russia,1988-06-25
+UEFA,UEFA Euro,1992,Denmark,Germany,1992-06-26
+UEFA,UEFA Euro,1996,Germany,Czech Republic,1996-06-30
+UEFA,UEFA Euro,2000,France,Italy,2000-07-02
+UEFA,UEFA Euro,2004,Greece,Portugal,2004-07-04
+UEFA,UEFA Euro,2008,Spain,Germany,2008-06-29
+UEFA,UEFA Euro,2012,Spain,Italy,2012-07-01
+UEFA,UEFA Euro,2016,Portugal,France,2016-07-10
+UEFA,UEFA Euro,2020,Italy,England,2021-07-11
+UEFA,UEFA Euro,2024,Spain,England,2024-07-14
+CONMEBOL,Copa América,1929,Argentina,Paraguay,1929-11-17
+CONMEBOL,Copa América,1935,Uruguay,Argentina,1935-01-27
+CONMEBOL,Copa América,1937,Argentina,Brazil,1937-02-01
+CONMEBOL,Copa América,1939,Peru,Uruguay,1939-02-12
+CONMEBOL,Copa América,1941,Argentina,Uruguay,1941-03-04
+CONMEBOL,Copa América,1942,Uruguay,Argentina,1942-02-07
+CONMEBOL,Copa América,1945,Argentina,Brazil,1945-03-25
+CONMEBOL,Copa América,1946,Argentina,Brazil,1946-02-12
+CONMEBOL,Copa América,1947,Argentina,Brazil,1947-12-31
+CONMEBOL,Copa América,1949,Brazil,Paraguay,1949-05-11
+CONMEBOL,Copa América,1953,Paraguay,Brazil,1953-04-04
+CONMEBOL,Copa América,1955,Argentina,Chile,1955-03-30
+CONMEBOL,Copa América,1956,Uruguay,Argentina,1956-03-15
+CONMEBOL,Copa América,1957,Argentina,Brazil,1957-04-10
+CONMEBOL,Copa América,1959,Argentina,Brazil,1959-04-10
+CONMEBOL,Copa América,1959,Uruguay,Argentina,1959-12-30
+CONMEBOL,Copa América,1963,Bolivia,Paraguay,1963-03-31
+CONMEBOL,Copa América,1967,Uruguay,Argentina,1967-11-04
+CONMEBOL,Copa América,1975,Peru,Colombia,1975-10-28
+CONMEBOL,Copa América,1979,Paraguay,Chile,1979-12-11
+CONMEBOL,Copa América,1983,Uruguay,Brazil,1983-11-04
+CONMEBOL,Copa América,1987,Uruguay,Chile,1987-07-12
+CONMEBOL,Copa América,1989,Brazil,Uruguay,1989-07-16
+CONMEBOL,Copa América,1991,Argentina,Brazil,1991-07-21
+CONMEBOL,Copa América,1993,Argentina,Mexico,1993-07-04
+CONMEBOL,Copa América,1995,Uruguay,Brazil,1995-07-23
+CONMEBOL,Copa América,1997,Brazil,Bolivia,1997-06-29
+CONMEBOL,Copa América,1999,Brazil,Uruguay,1999-07-18
+CONMEBOL,Copa América,2001,Colombia,Mexico,2001-07-29
+CONMEBOL,Copa América,2004,Brazil,Argentina,2004-07-25
+CONMEBOL,Copa América,2007,Brazil,Argentina,2007-07-15
+CONMEBOL,Copa América,2011,Uruguay,Paraguay,2011-07-24
+CONMEBOL,Copa América,2015,Chile,Argentina,2015-07-04
+CONMEBOL,Copa América,2016,Chile,Argentina,2016-06-26
+CONMEBOL,Copa América,2019,Brazil,Peru,2019-07-07
+CONMEBOL,Copa América,2021,Argentina,Brazil,2021-07-10
+CONMEBOL,Copa América,2024,Argentina,Colombia,2024-07-14
+CAF,African Cup of Nations,1957,Egypt,Ethiopia,1957-02-16
+CAF,African Cup of Nations,1959,Egypt,Sudan,1959-05-29
+CAF,African Cup of Nations,1962,Ethiopia,Egypt,1962-01-21
+CAF,African Cup of Nations,1963,Ghana,Sudan,1963-11-24
+CAF,African Cup of Nations,1965,Ghana,Tunisia,1965-11-21
+CAF,African Cup of Nations,1968,DR Congo,Ghana,1968-01-21
+CAF,African Cup of Nations,1970,Sudan,Ghana,1970-03-06
+CAF,African Cup of Nations,1972,Congo,Mali,1972-03-05
+CAF,African Cup of Nations,1974,DR Congo,Zambia,1974-03-14
+CAF,African Cup of Nations,1976,Morocco,Guinea,1976-03-14
+CAF,African Cup of Nations,1978,Ghana,Uganda,1978-03-18
+CAF,African Cup of Nations,1980,Nigeria,Algeria,1980-03-22
+CAF,African Cup of Nations,1982,Ghana,Libya,1982-03-19
+CAF,African Cup of Nations,1984,Cameroon,Nigeria,1984-03-18
+CAF,African Cup of Nations,1986,Egypt,Cameroon,1986-03-28
+CAF,African Cup of Nations,1988,Cameroon,Nigeria,1988-03-27
+CAF,African Cup of Nations,1990,Algeria,Nigeria,1990-03-16
+CAF,African Cup of Nations,1992,Ivory Coast,Ghana,1992-01-26
+CAF,African Cup of Nations,1994,Nigeria,Zambia,1994-04-10
+CAF,African Cup of Nations,1996,South Africa,Tunisia,1996-02-03
+CAF,African Cup of Nations,1998,Egypt,South Africa,1998-02-28
+CAF,African Cup of Nations,2000,Cameroon,Nigeria,2000-02-13
+CAF,African Cup of Nations,2002,Cameroon,Senegal,2002-02-10
+CAF,African Cup of Nations,2004,Tunisia,Morocco,2004-02-14
+CAF,African Cup of Nations,2006,Egypt,Ivory Coast,2006-02-10
+CAF,African Cup of Nations,2008,Egypt,Cameroon,2008-02-10
+CAF,African Cup of Nations,2010,Egypt,Ghana,2010-01-31
+CAF,African Cup of Nations,2012,Zambia,Ivory Coast,2012-02-12
+CAF,African Cup of Nations,2013,Nigeria,Burkina Faso,2013-02-10
+CAF,African Cup of Nations,2015,Ivory Coast,Ghana,2015-02-08
+CAF,African Cup of Nations,2017,Cameroon,Egypt,2017-02-05
+CAF,African Cup of Nations,2019,Algeria,Senegal,2019-07-19
+CAF,African Cup of Nations,2021,Senegal,Egypt,2022-02-06
+CAF,African Cup of Nations,2023,Ivory Coast,Nigeria,2024-02-11
+CAF,African Cup of Nations,2025,UNKNOWN,UNKNOWN,2026-01-18
+CONCACAF,CONCACAF Championship,1963,Costa Rica,El Salvador,1963-04-04
+CONCACAF,CONCACAF Championship,1965,Mexico,Guatemala,1965-04-11
+CONCACAF,CONCACAF Championship,1967,Guatemala,Mexico,1967-03-19
+CONCACAF,CONCACAF Championship,1969,Costa Rica,Guatemala,1969-12-04
+CONCACAF,CONCACAF Championship,1971,Mexico,Haiti,1971-09-04
+CONCACAF,CONCACAF Championship,1973,Haiti,Trinidad and Tobago,1973-12-14
+CONCACAF,CONCACAF Championship,1977,Mexico,Haiti,1977-10-23
+CONCACAF,CONCACAF Championship,1981,Honduras,El Salvador,1981-11-22
+CONCACAF,CONCACAF Championship,1985,Canada,Honduras,1985-09-14
+CONCACAF,CONCACAF Championship,1989,Costa Rica,United States,1989-11-19
+CONCACAF,Gold Cup,1991,United States,Honduras,1991-07-07
+CONCACAF,Gold Cup,1993,Mexico,United States,1993-07-25
+CONCACAF,Gold Cup,1996,Mexico,Brazil,1996-01-21
+CONCACAF,Gold Cup,1998,Mexico,United States,1998-02-15
+CONCACAF,Gold Cup,2000,Canada,Colombia,2000-02-27
+CONCACAF,Gold Cup,2002,United States,Costa Rica,2002-02-02
+CONCACAF,Gold Cup,2003,Mexico,Brazil,2003-07-27
+CONCACAF,Gold Cup,2005,United States,Panama,2005-07-24
+CONCACAF,Gold Cup,2007,United States,Mexico,2007-06-24
+CONCACAF,Gold Cup,2009,Mexico,United States,2009-07-26
+CONCACAF,Gold Cup,2011,Mexico,United States,2011-06-25
+CONCACAF,Gold Cup,2013,United States,Panama,2013-07-28
+CONCACAF,Gold Cup,2015,Mexico,Jamaica,2015-07-26
+CONCACAF,Gold Cup,2017,United States,Jamaica,2017-07-26
+CONCACAF,Gold Cup,2019,Mexico,United States,2019-07-07
+CONCACAF,Gold Cup,2021,United States,Mexico,2021-08-01
+CONCACAF,Gold Cup,2023,Mexico,Panama,2023-07-16
+CONCACAF,Gold Cup,2025,UNKNOWN,UNKNOWN,2025-07-06
+OFC,Oceania Nations Cup,1973,New Zealand,Tahiti,1973-02-24
+OFC,Oceania Nations Cup,1980,Australia,Tahiti,1980-03-01
+OFC,Oceania Nations Cup,1996,Australia,Tahiti,1996-11-01
+OFC,Oceania Nations Cup,1998,New Zealand,Australia,1998-09-04
+OFC,Oceania Nations Cup,2000,Australia,New Zealand,2000-06-28
+OFC,Oceania Nations Cup,2002,New Zealand,Australia,2002-07-14
+OFC,Oceania Nations Cup,2004,Australia,Solomon Islands,2004-10-10
+OFC,Oceania Nations Cup,2008,New Zealand,New Caledonia,2008-11-19
+OFC,Oceania Nations Cup,2012,Tahiti,New Caledonia,2012-06-10
+OFC,Oceania Nations Cup,2016,New Zealand,Papua New Guinea,2016-06-11
+OFC,Oceania Nations Cup,2024,New Zealand,Vanuatu,2024-06-30
+AFC,AFC Asian Cup,1956,South Korea,Israel,1956-09-15
+AFC,AFC Asian Cup,1960,South Korea,Israel,1960-10-23
+AFC,AFC Asian Cup,1964,Israel,India,1964-06-03
+AFC,AFC Asian Cup,1968,Iran,Burma,1968-05-19
+AFC,AFC Asian Cup,1972,Iran,South Korea,1972-05-19
+AFC,AFC Asian Cup,1976,Iran,Kuwait,1976-06-13
+AFC,AFC Asian Cup,1980,Kuwait,South Korea,1980-09-30
+AFC,AFC Asian Cup,1984,Saudi Arabia,China,1984-12-16
+AFC,AFC Asian Cup,1988,Saudi Arabia,South Korea,1988-12-18
+AFC,AFC Asian Cup,1992,Japan,Saudi Arabia,1992-11-08
+AFC,AFC Asian Cup,1996,Saudi Arabia,United Arab Emirates,1996-12-21
+AFC,AFC Asian Cup,2000,Japan,Saudi Arabia,2000-10-29
+AFC,AFC Asian Cup,2004,Japan,China,2004-08-07
+AFC,AFC Asian Cup,2007,Iraq,Saudi Arabia,2007-07-29
+AFC,AFC Asian Cup,2011,Japan,Australia,2011-01-29
+AFC,AFC Asian Cup,2015,Australia,South Korea,2015-01-31
+AFC,AFC Asian Cup,2019,Qatar,Japan,2019-02-01
+AFC,AFC Asian Cup,2023,Qatar,Jordan,2024-02-10

@@ -1,0 +1,139 @@
+wc_year,wc_start,confederation,tournament,edition,champion,runner_up,final_date,gap_months,within_18mo,used_fallback,note
+1930,1930-07-13,UEFA,,,,,,,False,True,no prior continental final
+1930,1930-07-13,CONMEBOL,Copa América,1929.0,Argentina,Paraguay,1929-11-17,8.0,True,False,
+1930,1930-07-13,CAF,,,,,,,False,True,no prior continental final
+1930,1930-07-13,CONCACAF,,,,,,,False,True,no prior continental final
+1930,1930-07-13,OFC,,,,,,,False,True,no prior continental final
+1930,1930-07-13,AFC,,,,,,,False,True,no prior continental final
+1934,1934-05-27,UEFA,,,,,,,False,True,no prior continental final
+1934,1934-05-27,CONMEBOL,Copa América,1929.0,Argentina,Paraguay,1929-11-17,54.0,False,True,fallback: no continental final within 18 months
+1934,1934-05-27,CAF,,,,,,,False,True,no prior continental final
+1934,1934-05-27,CONCACAF,,,,,,,False,True,no prior continental final
+1934,1934-05-27,OFC,,,,,,,False,True,no prior continental final
+1934,1934-05-27,AFC,,,,,,,False,True,no prior continental final
+1938,1938-06-04,UEFA,,,,,,,False,True,no prior continental final
+1938,1938-06-04,CONMEBOL,Copa América,1937.0,Argentina,Brazil,1937-02-01,16.0,True,False,
+1938,1938-06-04,CAF,,,,,,,False,True,no prior continental final
+1938,1938-06-04,CONCACAF,,,,,,,False,True,no prior continental final
+1938,1938-06-04,OFC,,,,,,,False,True,no prior continental final
+1938,1938-06-04,AFC,,,,,,,False,True,no prior continental final
+1950,1950-06-24,UEFA,,,,,,,False,True,no prior continental final
+1950,1950-06-24,CONMEBOL,Copa América,1949.0,Brazil,Paraguay,1949-05-11,13.0,True,False,
+1950,1950-06-24,CAF,,,,,,,False,True,no prior continental final
+1950,1950-06-24,CONCACAF,,,,,,,False,True,no prior continental final
+1950,1950-06-24,OFC,,,,,,,False,True,no prior continental final
+1950,1950-06-24,AFC,,,,,,,False,True,no prior continental final
+1954,1954-06-16,UEFA,,,,,,,False,True,no prior continental final
+1954,1954-06-16,CONMEBOL,Copa América,1953.0,Paraguay,Brazil,1953-04-04,14.0,True,False,
+1954,1954-06-16,CAF,,,,,,,False,True,no prior continental final
+1954,1954-06-16,CONCACAF,,,,,,,False,True,no prior continental final
+1954,1954-06-16,OFC,,,,,,,False,True,no prior continental final
+1954,1954-06-16,AFC,,,,,,,False,True,no prior continental final
+1958,1958-06-08,UEFA,,,,,,,False,True,no prior continental final
+1958,1958-06-08,CONMEBOL,Copa América,1957.0,Argentina,Brazil,1957-04-10,14.0,True,False,
+1958,1958-06-08,CAF,African Cup of Nations,1957.0,Egypt,Ethiopia,1957-02-16,16.0,True,False,
+1958,1958-06-08,CONCACAF,,,,,,,False,True,no prior continental final
+1958,1958-06-08,OFC,,,,,,,False,True,no prior continental final
+1958,1958-06-08,AFC,AFC Asian Cup,1956.0,South Korea,Israel,1956-09-15,21.0,False,True,fallback: no continental final within 18 months
+1962,1962-05-30,UEFA,UEFA Euro,1960.0,Russia,Yugoslavia,1960-07-10,22.0,False,True,fallback: no continental final within 18 months
+1962,1962-05-30,CONMEBOL,Copa América,1959.0,Uruguay,Argentina,1959-12-30,29.0,False,True,fallback: no continental final within 18 months
+1962,1962-05-30,CAF,African Cup of Nations,1962.0,Ethiopia,Egypt,1962-01-21,4.0,True,False,
+1962,1962-05-30,CONCACAF,,,,,,,False,True,no prior continental final
+1962,1962-05-30,OFC,,,,,,,False,True,no prior continental final
+1962,1962-05-30,AFC,AFC Asian Cup,1960.0,South Korea,Israel,1960-10-23,19.0,False,True,fallback: no continental final within 18 months
+1966,1966-07-11,UEFA,UEFA Euro,1964.0,Spain,Russia,1964-06-21,25.0,False,True,fallback: no continental final within 18 months
+1966,1966-07-11,CONMEBOL,Copa América,1963.0,Bolivia,Paraguay,1963-03-31,40.0,False,True,fallback: no continental final within 18 months
+1966,1966-07-11,CAF,African Cup of Nations,1965.0,Ghana,Tunisia,1965-11-21,8.0,True,False,
+1966,1966-07-11,CONCACAF,CONCACAF Championship,1965.0,Mexico,Guatemala,1965-04-11,15.0,True,False,
+1966,1966-07-11,OFC,,,,,,,False,True,no prior continental final
+1966,1966-07-11,AFC,AFC Asian Cup,1964.0,Israel,India,1964-06-03,25.0,False,True,fallback: no continental final within 18 months
+1970,1970-05-31,UEFA,UEFA Euro,1968.0,Italy,Yugoslavia,1968-06-10,23.0,False,True,fallback: no continental final within 18 months
+1970,1970-05-31,CONMEBOL,Copa América,1967.0,Uruguay,Argentina,1967-11-04,30.0,False,True,fallback: no continental final within 18 months
+1970,1970-05-31,CAF,African Cup of Nations,1970.0,Sudan,Ghana,1970-03-06,2.0,True,False,
+1970,1970-05-31,CONCACAF,CONCACAF Championship,1969.0,Costa Rica,Guatemala,1969-12-04,5.0,True,False,
+1970,1970-05-31,OFC,,,,,,,False,True,no prior continental final
+1970,1970-05-31,AFC,AFC Asian Cup,1968.0,Iran,Burma,1968-05-19,24.0,False,True,fallback: no continental final within 18 months
+1974,1974-06-13,UEFA,UEFA Euro,1972.0,Germany,Russia,1972-06-18,24.0,False,True,fallback: no continental final within 18 months
+1974,1974-06-13,CONMEBOL,Copa América,1967.0,Uruguay,Argentina,1967-11-04,79.0,False,True,fallback: no continental final within 18 months
+1974,1974-06-13,CAF,African Cup of Nations,1974.0,DR Congo,Zambia,1974-03-14,3.0,True,False,
+1974,1974-06-13,CONCACAF,CONCACAF Championship,1973.0,Haiti,Trinidad and Tobago,1973-12-14,6.0,True,False,
+1974,1974-06-13,OFC,Oceania Nations Cup,1973.0,New Zealand,Tahiti,1973-02-24,16.0,True,False,
+1974,1974-06-13,AFC,AFC Asian Cup,1972.0,Iran,South Korea,1972-05-19,25.0,False,True,fallback: no continental final within 18 months
+1978,1978-06-01,UEFA,UEFA Euro,1976.0,Czechoslovakia,Germany,1976-06-20,24.0,False,True,fallback: no continental final within 18 months
+1978,1978-06-01,CONMEBOL,Copa América,1975.0,Peru,Colombia,1975-10-28,32.0,False,True,fallback: no continental final within 18 months
+1978,1978-06-01,CAF,African Cup of Nations,1978.0,Ghana,Uganda,1978-03-18,3.0,True,False,
+1978,1978-06-01,CONCACAF,CONCACAF Championship,1977.0,Mexico,Haiti,1977-10-23,8.0,True,False,
+1978,1978-06-01,OFC,Oceania Nations Cup,1973.0,New Zealand,Tahiti,1973-02-24,64.0,False,True,fallback: no continental final within 18 months
+1978,1978-06-01,AFC,AFC Asian Cup,1976.0,Iran,Kuwait,1976-06-13,24.0,False,True,fallback: no continental final within 18 months
+1982,1982-06-13,UEFA,UEFA Euro,1980.0,Germany,Belgium,1980-06-22,24.0,False,True,fallback: no continental final within 18 months
+1982,1982-06-13,CONMEBOL,Copa América,1979.0,Paraguay,Chile,1979-12-11,30.0,False,True,fallback: no continental final within 18 months
+1982,1982-06-13,CAF,African Cup of Nations,1982.0,Ghana,Libya,1982-03-19,3.0,True,False,
+1982,1982-06-13,CONCACAF,CONCACAF Championship,1981.0,Honduras,El Salvador,1981-11-22,7.0,True,False,
+1982,1982-06-13,OFC,Oceania Nations Cup,1980.0,Australia,Tahiti,1980-03-01,27.0,False,True,fallback: no continental final within 18 months
+1982,1982-06-13,AFC,AFC Asian Cup,1980.0,Kuwait,South Korea,1980-09-30,21.0,False,True,fallback: no continental final within 18 months
+1986,1986-05-31,UEFA,UEFA Euro,1984.0,France,Spain,1984-06-27,23.0,False,True,fallback: no continental final within 18 months
+1986,1986-05-31,CONMEBOL,Copa América,1983.0,Uruguay,Brazil,1983-11-04,30.0,False,True,fallback: no continental final within 18 months
+1986,1986-05-31,CAF,African Cup of Nations,1986.0,Egypt,Cameroon,1986-03-28,2.0,True,False,
+1986,1986-05-31,CONCACAF,CONCACAF Championship,1985.0,Canada,Honduras,1985-09-14,8.0,True,False,
+1986,1986-05-31,OFC,Oceania Nations Cup,1980.0,Australia,Tahiti,1980-03-01,74.0,False,True,fallback: no continental final within 18 months
+1986,1986-05-31,AFC,AFC Asian Cup,1984.0,Saudi Arabia,China,1984-12-16,17.0,True,False,
+1990,1990-06-08,UEFA,UEFA Euro,1988.0,Netherlands,Russia,1988-06-25,24.0,False,True,fallback: no continental final within 18 months
+1990,1990-06-08,CONMEBOL,Copa América,1989.0,Brazil,Uruguay,1989-07-16,11.0,True,False,
+1990,1990-06-08,CAF,African Cup of Nations,1990.0,Algeria,Nigeria,1990-03-16,3.0,True,False,
+1990,1990-06-08,CONCACAF,CONCACAF Championship,1989.0,Costa Rica,United States,1989-11-19,7.0,True,False,
+1990,1990-06-08,OFC,Oceania Nations Cup,1980.0,Australia,Tahiti,1980-03-01,123.0,False,True,fallback: no continental final within 18 months
+1990,1990-06-08,AFC,AFC Asian Cup,1988.0,Saudi Arabia,South Korea,1988-12-18,18.0,True,False,
+1994,1994-06-17,UEFA,UEFA Euro,1992.0,Denmark,Germany,1992-06-26,24.0,False,True,fallback: no continental final within 18 months
+1994,1994-06-17,CONMEBOL,Copa América,1993.0,Argentina,Mexico,1993-07-04,11.0,True,False,
+1994,1994-06-17,CAF,African Cup of Nations,1994.0,Nigeria,Zambia,1994-04-10,2.0,True,False,
+1994,1994-06-17,CONCACAF,Gold Cup,1993.0,Mexico,United States,1993-07-25,11.0,True,False,
+1994,1994-06-17,OFC,Oceania Nations Cup,1980.0,Australia,Tahiti,1980-03-01,171.0,False,True,fallback: no continental final within 18 months
+1994,1994-06-17,AFC,AFC Asian Cup,1992.0,Japan,Saudi Arabia,1992-11-08,19.0,False,True,fallback: no continental final within 18 months
+1998,1998-06-10,UEFA,UEFA Euro,1996.0,Germany,Czech Republic,1996-06-30,24.0,False,True,fallback: no continental final within 18 months
+1998,1998-06-10,CONMEBOL,Copa América,1997.0,Brazil,Bolivia,1997-06-29,12.0,True,False,
+1998,1998-06-10,CAF,African Cup of Nations,1998.0,Egypt,South Africa,1998-02-28,4.0,True,False,
+1998,1998-06-10,CONCACAF,Gold Cup,1998.0,Mexico,United States,1998-02-15,4.0,True,False,
+1998,1998-06-10,OFC,Oceania Nations Cup,1996.0,Australia,Tahiti,1996-11-01,19.0,False,True,fallback: no continental final within 18 months
+1998,1998-06-10,AFC,AFC Asian Cup,1996.0,Saudi Arabia,United Arab Emirates,1996-12-21,18.0,True,False,
+2002,2002-05-31,UEFA,UEFA Euro,2000.0,France,Italy,2000-07-02,22.0,False,True,fallback: no continental final within 18 months
+2002,2002-05-31,CONMEBOL,Copa América,2001.0,Colombia,Mexico,2001-07-29,10.0,True,False,
+2002,2002-05-31,CAF,African Cup of Nations,2002.0,Cameroon,Senegal,2002-02-10,3.0,True,False,
+2002,2002-05-31,CONCACAF,Gold Cup,2002.0,United States,Costa Rica,2002-02-02,3.0,True,False,
+2002,2002-05-31,OFC,Oceania Nations Cup,2000.0,Australia,New Zealand,2000-06-28,23.0,False,True,fallback: no continental final within 18 months
+2002,2002-05-31,AFC,AFC Asian Cup,2000.0,Japan,Saudi Arabia,2000-10-29,19.0,False,True,fallback: no continental final within 18 months
+2006,2006-06-09,UEFA,UEFA Euro,2004.0,Greece,Portugal,2004-07-04,23.0,False,True,fallback: no continental final within 18 months
+2006,2006-06-09,CONMEBOL,Copa América,2004.0,Brazil,Argentina,2004-07-25,23.0,False,True,fallback: no continental final within 18 months
+2006,2006-06-09,CAF,African Cup of Nations,2006.0,Egypt,Ivory Coast,2006-02-10,4.0,True,False,
+2006,2006-06-09,CONCACAF,Gold Cup,2005.0,United States,Panama,2005-07-24,11.0,True,False,
+2006,2006-06-09,OFC,Oceania Nations Cup,2004.0,Australia,Solomon Islands,2004-10-10,20.0,False,True,fallback: no continental final within 18 months
+2006,2006-06-09,AFC,AFC Asian Cup,2004.0,Japan,China,2004-08-07,22.0,False,True,fallback: no continental final within 18 months
+2010,2010-06-11,UEFA,UEFA Euro,2008.0,Spain,Germany,2008-06-29,24.0,False,True,fallback: no continental final within 18 months
+2010,2010-06-11,CONMEBOL,Copa América,2007.0,Brazil,Argentina,2007-07-15,35.0,False,True,fallback: no continental final within 18 months
+2010,2010-06-11,CAF,African Cup of Nations,2010.0,Egypt,Ghana,2010-01-31,5.0,True,False,
+2010,2010-06-11,CONCACAF,Gold Cup,2009.0,Mexico,United States,2009-07-26,11.0,True,False,
+2010,2010-06-11,OFC,Oceania Nations Cup,2008.0,New Zealand,New Caledonia,2008-11-19,19.0,False,True,fallback: no continental final within 18 months
+2010,2010-06-11,AFC,AFC Asian Cup,2007.0,Iraq,Saudi Arabia,2007-07-29,35.0,False,True,fallback: no continental final within 18 months
+2014,2014-06-12,UEFA,UEFA Euro,2012.0,Spain,Italy,2012-07-01,23.0,False,True,fallback: no continental final within 18 months
+2014,2014-06-12,CONMEBOL,Copa América,2011.0,Uruguay,Paraguay,2011-07-24,35.0,False,True,fallback: no continental final within 18 months
+2014,2014-06-12,CAF,African Cup of Nations,2013.0,Nigeria,Burkina Faso,2013-02-10,16.0,True,False,
+2014,2014-06-12,CONCACAF,Gold Cup,2013.0,United States,Panama,2013-07-28,11.0,True,False,
+2014,2014-06-12,OFC,Oceania Nations Cup,2012.0,Tahiti,New Caledonia,2012-06-10,24.0,False,True,fallback: no continental final within 18 months
+2014,2014-06-12,AFC,AFC Asian Cup,2011.0,Japan,Australia,2011-01-29,41.0,False,True,fallback: no continental final within 18 months
+2018,2018-06-14,UEFA,UEFA Euro,2016.0,Portugal,France,2016-07-10,23.0,False,True,fallback: no continental final within 18 months
+2018,2018-06-14,CONMEBOL,Copa América,2016.0,Chile,Argentina,2016-06-26,24.0,False,True,fallback: no continental final within 18 months
+2018,2018-06-14,CAF,African Cup of Nations,2017.0,Cameroon,Egypt,2017-02-05,16.0,True,False,
+2018,2018-06-14,CONCACAF,Gold Cup,2017.0,United States,Jamaica,2017-07-26,11.0,True,False,
+2018,2018-06-14,OFC,Oceania Nations Cup,2016.0,New Zealand,Papua New Guinea,2016-06-11,24.0,False,True,fallback: no continental final within 18 months
+2018,2018-06-14,AFC,AFC Asian Cup,2015.0,Australia,South Korea,2015-01-31,41.0,False,True,fallback: no continental final within 18 months
+2022,2022-11-20,UEFA,UEFA Euro,2020.0,Italy,England,2021-07-11,16.0,True,False,
+2022,2022-11-20,CONMEBOL,Copa América,2021.0,Argentina,Brazil,2021-07-10,16.0,True,False,
+2022,2022-11-20,CAF,African Cup of Nations,2021.0,Senegal,Egypt,2022-02-06,9.0,True,False,
+2022,2022-11-20,CONCACAF,Gold Cup,2021.0,United States,Mexico,2021-08-01,15.0,True,False,
+2022,2022-11-20,OFC,Oceania Nations Cup,2016.0,New Zealand,Papua New Guinea,2016-06-11,77.0,False,True,fallback: no continental final within 18 months
+2022,2022-11-20,AFC,AFC Asian Cup,2019.0,Qatar,Japan,2019-02-01,45.0,False,True,fallback: no continental final within 18 months
+2026,2026-06-11,UEFA,UEFA Euro,2024.0,Spain,England,2024-07-14,23.0,False,True,fallback: no continental final within 18 months
+2026,2026-06-11,CONMEBOL,Copa América,2024.0,Argentina,Colombia,2024-07-14,23.0,False,True,fallback: no continental final within 18 months
+2026,2026-06-11,CAF,African Cup of Nations,2025.0,UNKNOWN,UNKNOWN,2026-01-18,5.0,True,False,
+2026,2026-06-11,CONCACAF,Gold Cup,2025.0,UNKNOWN,UNKNOWN,2025-07-06,11.0,True,False,
+2026,2026-06-11,OFC,Oceania Nations Cup,2024.0,New Zealand,Vanuatu,2024-06-30,24.0,False,True,fallback: no continental final within 18 months
+2026,2026-06-11,AFC,AFC Asian Cup,2023.0,Qatar,Jordan,2024-02-10,28.0,False,True,fallback: no continental final within 18 months
