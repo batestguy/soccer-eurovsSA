@@ -175,6 +175,11 @@ def main():
         design = bspline_basis(((panel["t"] - t_mean) / t_std).to_numpy(), SPLINE_DF)[0]
         panel = panel.reset_index(drop=True)
 
+    # center spline columns so alpha_c is the continent LEVEL and the spline is a
+    # zero-mean deviation (avoids confounding alpha_c with the spline constant).
+    spline_col_means = design.mean(axis=0)
+    design = design - spline_col_means
+
     n = len(panel)
     log_elo = panel["log_elo"].to_numpy()
     cont_idx = panel["conf_idx"].to_numpy()
@@ -201,13 +206,13 @@ def main():
               + pt.sum(spline_design * theta_c[cont_idx], axis=-1))
         pm.Normal("obs", mu=mu, sigma=sigma_resid, observed=log_elo)
 
-    draws = 10 if FAST else 300
-    tune = 10 if FAST else 300
+    draws = 10 if FAST else 400
+    tune = 10 if FAST else 400
     chains = 1 if FAST else 2
     sampler = "numpyro" if _has_numpyro() else None
     with model:
         kwargs = dict(draws=draws, tune=tune, chains=chains, cores=1,
-                      target_accept=0.90, random_seed=20260816, progressbar=False)
+                      target_accept=0.95, random_seed=20260816, progressbar=False)
         if sampler:
             kwargs["nuts_sampler"] = sampler
         posterior = pm.sample(**kwargs)
@@ -219,6 +224,7 @@ def main():
     grid_t = np.array([p.year + (p.month - 1) / 12.0 for p in months])
     grid_std = (grid_t - t_mean) / t_std
     grid_design, _ = bspline_basis(grid_std, SPLINE_DF)
+    grid_design = grid_design - spline_col_means
 
     post = posterior.posterior
     alpha_c_post = post["alpha_c"].values.reshape(-1, len(CONFEDERATIONS))      # (S,6)
@@ -296,6 +302,7 @@ def main():
     # meta
     meta = {"model": "hierarchical panel random effects on log(monthly Elo)",
             "spline_df": SPLINE_DF, "knots_std": knots.tolist(),
+            "spline_col_means": spline_col_means.tolist(),
             "time_mean": float(t_mean), "time_std": float(t_std),
             "continents": CONFEDERATIONS, "months": [str(m) for m in months],
             "n_rows": int(n), "n_teams": int(len(teams)),

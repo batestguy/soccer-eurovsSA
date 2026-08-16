@@ -1,31 +1,31 @@
 # CONTINENTAL STRENGTH — STAGE 05 BUILD REPORT
 
-- Generated: 2026-08-16 09:31 UTC
+- Generated: 2026-08-16 09:59 UTC
 - Panel: 32,432 team-month rows, 226 teams, 416 months, log(monthly Elo).
 - Model: log_elo ~ N(alpha_0 + alpha_c + u_i + S(t).theta_c, sigma); spline df=8.
-- Sampling: 2 chains x 300 draws; divergences=3; max R-hat=1.488; min ESS=4.0.
+- Sampling: 2 chains x 400 draws; divergences=4; max R-hat=1.122; min ESS=13.5.
 - Historical membership overrides applied (Australia, Israel, Kazakhstan).
 
 ## Continental strength ranking (log-Elo random intercepts)
 | Continent | effect (mean) | 90% HDI |
 |---|---|---|
-| CONMEBOL | 0.112 | [0.014, 0.228] |
-| AFC | 0.015 | [-0.046, 0.066] |
-| OFC | -0.015 | [-0.078, 0.039] |
-| CAF | -0.026 | [-0.094, 0.032] |
-| UEFA | -0.035 | [-0.100, 0.019] |
-| CONCACAF | -0.055 | [-0.128, 0.010] |
+| CONMEBOL | 0.123 | [0.029, 0.241] |
+| AFC | 0.019 | [-0.047, 0.078] |
+| OFC | -0.008 | [-0.076, 0.052] |
+| CAF | -0.029 | [-0.108, 0.033] |
+| UEFA | -0.037 | [-0.103, 0.022] |
+| CONCACAF | -0.060 | [-0.139, 0.011] |
 
 ## Pairwise: which continent is stronger (overall average difference)
 A ahead of B if avg_log_diff > 0; P(A>B) = P(avg difference > 0).
 | Pair | avg log-diff | 90% HDI | avg Elo-pts diff | P(A>B) |
 |---|---|---|---|---|
-| CONMEBOL vs CONCACAF | +0.169 | [+0.060, +0.286] | +268.2 | 0.99 |
-| CONMEBOL vs CAF | +0.146 | [+0.038, +0.260] | +234.7 | 0.99 |
-| CONMEBOL vs OFC | +0.128 | [+0.018, +0.247] | +208.4 | 0.97 |
-| CONMEBOL vs AFC | +0.101 | [-0.013, +0.222] | +167.5 | 0.93 |
-| CAF vs CONCACAF | +0.023 | [-0.017, +0.065] | +33.5 | 0.81 |
-| UEFA vs CONCACAF | +0.015 | [-0.025, +0.055] | +22.1 | 0.70 |
+| CONMEBOL vs CONCACAF | +0.184 | [+0.066, +0.322] | +291.4 | 1.00 |
+| CONMEBOL vs CAF | +0.152 | [+0.045, +0.285] | +245.8 | 0.99 |
+| CONMEBOL vs OFC | +0.131 | [+0.029, +0.255] | +214.6 | 0.99 |
+| CONMEBOL vs AFC | +0.104 | [+0.001, +0.227] | +173.7 | 0.95 |
+| CAF vs CONCACAF | +0.032 | [-0.028, +0.101] | +45.5 | 0.77 |
+| UEFA vs CONCACAF | +0.024 | [-0.018, +0.070] | +34.3 | 0.81 |
 
 ## Caveats
 - 'Effect' is structural/associational (continent is a fixed attribute); NOT a causal claim.
