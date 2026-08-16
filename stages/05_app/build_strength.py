@@ -206,13 +206,13 @@ def main():
               + pt.sum(spline_design * theta_c[cont_idx], axis=-1))
         pm.Normal("obs", mu=mu, sigma=sigma_resid, observed=log_elo)
 
-    draws = 10 if FAST else 1000
-    tune = 10 if FAST else 800
-    chains = 1 if FAST else 2
+    draws = 10 if FAST else 400
+    tune = 10 if FAST else 400
+    chains = 1 if FAST else 4
     sampler = "numpyro" if _has_numpyro() else None
     with model:
         kwargs = dict(draws=draws, tune=tune, chains=chains, cores=1,
-                      target_accept=0.90, random_seed=20260816, progressbar=False)
+                      target_accept=0.95, random_seed=20260816, progressbar=False)
         if sampler:
             kwargs["nuts_sampler"] = sampler
         posterior = pm.sample(**kwargs)
