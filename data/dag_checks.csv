@@ -1,0 +1,29 @@
+check_id,check_name,metric,value,ci_lo,ci_hi,p_value,n,note
+C1,Confounding (strength->champion),"mean log-Elo, champions",7.535702027518223,,,,55,
+C1,Confounding (strength->champion),"mean log-Elo, non-champions",7.490218572752402,,,,434,
+C1,Confounding (strength->champion),mean diff log-Elo (champ - non),0.0454834547658205,0.026691056903195332,0.06608199905351193,0.0002537609814690104,489,bootstrap 90% CI
+C1,Confounding (strength->champion),Welch t,3.8496128664425644,,,0.0002537609814690104,489,
+C2,Independence proxy (champion | elo),OR champion (elo + champion),0.815192461421459,0.2714974023526269,2.4476799534724796,0.7598219360501336,487,"logistic, winner ~ elo_z + champion (OFC dropped)"
+C2,"Independence proxy (champion | elo, conf)",OR champion (elo + champion + conf),0.8713632441274262,0.2743912333311391,2.7671215803748748,0.8445886874971535,487,within-conf conditioning
+C2,"Independence proxy (champion | elo, conf)",LR-test: conf terms,15.296547144200275,,,0.0041240736334833845,487,chi2 df=4
+C3,Sensitivity (conf effects),conf:CONMEBOL logit M0 (marginal),1.0366100557428772,,,,487,
+C3,Sensitivity (conf effects),conf:CAF logit M0 (marginal),-12.182804634494813,,,,487,
+C3,Sensitivity (conf effects),conf:CONCACAF logit M0 (marginal),-12.237719115978592,,,,487,
+C3,Sensitivity (conf effects),conf:AFC logit M0 (marginal),-12.083378941652388,,,,487,
+C3,Sensitivity (conf effects),conf:CONMEBOL logit M2 (elo+champ adj),0.9844229463290427,,,,487,
+C3,Sensitivity (conf effects),conf:CAF logit M2 (elo+champ adj),-11.848354861051487,,,,487,
+C3,Sensitivity (conf effects),conf:CONCACAF logit M2 (elo+champ adj),-11.965026767462053,,,,487,
+C3,Sensitivity (conf effects),conf:AFC logit M2 (elo+champ adj),-11.805432969526459,,,,487,
+C3,Sensitivity (conf effects),max |shift| M0->M2,0.3344497734433265,,,,487,largest mover: CAF
+C3,Sensitivity (posterior ref),"conf_offset:CONMEBOL (Bayesian, champ+elo adj)",0.3586166982149668,-0.1688964661431973,1.2581365036999645,,800,posterior.nc
+C3,Sensitivity (posterior ref),"conf_offset:CAF (Bayesian, champ+elo adj)",-0.09944797085544044,-0.9477506802277054,0.5689208596505011,,800,posterior.nc
+C3,Sensitivity (posterior ref),"conf_offset:CONCACAF (Bayesian, champ+elo adj)",-0.18353513253318973,-1.1031838307846713,0.4518085170470143,,800,posterior.nc
+C3,Sensitivity (posterior ref),"conf_offset:AFC (Bayesian, champ+elo adj)",-0.10315558621586071,-0.9841369047411704,0.6055287810780247,,800,posterior.nc
+C4,Balance (conf->strength),ANOVA F (log Elo ~ conf),5.941032254641266,,,5.025369892140513e-05,150,latest ranking month
+C4,Balance (conf->strength),eta-squared,0.1710090883625808,,,,150,share of Elo variance explained by conf
+C4,Balance (conf->strength),mean log-Elo UEFA,7.4248532566896275,7.383090829586645,7.46661568379261,,55,
+C4,Balance (conf->strength),mean log-Elo CONMEBOL,7.570820970190311,7.51697863781566,7.6246633025649615,,8,
+C4,Balance (conf->strength),mean log-Elo CAF,7.368277865336112,7.324407983964553,7.412147746707671,,31,
+C4,Balance (conf->strength),mean log-Elo CONCACAF,7.332009365875934,7.25822021367693,7.405798518074938,,22,
+C4,Balance (conf->strength),mean log-Elo OFC,7.177569288333801,6.986304589321637,7.368833987345965,,4,
+C4,Balance (conf->strength),mean log-Elo AFC,7.2572076761788775,7.192272918709772,7.322142433647983,,30,
