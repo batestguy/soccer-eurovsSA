@@ -1,5 +1,5 @@
 # DAG VALIDATION — stage 01
-Generated: 2026-08-16 04:41 UTC
+Generated: 2026-08-16 04:43 UTC
 
 ## Model
 Nodes: `team_strength, confederation, fifa_ranking, continental_champion, wc_outcome`
@@ -47,7 +47,6 @@ continental_champion from observational data. Claims about it are (1) a
 (run the generative model with continental_champion forced to 0 vs 1).
 Nothing is ever labeled an 'estimated causal effect'.
 
-## Data gaps feeding this stage
-- AFCON 2025 and Gold Cup 2025 champions are UNKNOWN (post-curation cutoff);
-  they sit inside the 18-month window for 2026 and must be filled before
-  building the 2026 `continental_champion` feature.
+## Data gap status
+- AFCON 2025 champion resolved as Morocco and Gold Cup 2025 champion resolved
+  as Mexico from the pinned match source; both now feed the 2026 alignment.
