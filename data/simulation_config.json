@@ -1,0 +1,15 @@
+{
+  "label": "retrospective pre-tournament replay",
+  "n_simulations": 50000,
+  "random_seed": 20260815,
+  "cutoff_elo": "2026-06-11",
+  "field_source": "2026 World Cup match participation (pinned source)",
+  "posterior_source": "data/posterior.nc",
+  "n_posterior_draws": 800,
+  "model": "softmax winner model: logit = beta_elo*elo_z + conf_offset[conf] + cc_effect[conf]*champion",
+  "standardization": {
+    "mean": 1806.89158984192,
+    "std": 160.0092656782986
+  },
+  "do_contrast": "P(win|do(champion=1)) - P(win|do(champion=0)); counterfactual simulation, not causal"
+}
