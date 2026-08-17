@@ -29,6 +29,7 @@ OUT = Path("/content/soccerdl_out")
 REQUIRED = [
     "README.md",
     "SESSION_HANDOFF.md",
+    "render.yaml",
     "spaces/app.py",
     "spaces/README.md",
     "spaces/requirements.txt",
@@ -158,11 +159,11 @@ def main() -> None:
         "validate_release.py", "release_stage05.py",
     ]:
         shutil.copy2(PAYLOAD / "stages" / "05_app" / name, remote_stage / name)
-    for name in ["README.md", "SESSION_HANDOFF.md"]:
+    for name in ["README.md", "SESSION_HANDOFF.md", "render.yaml"]:
         shutil.copy2(PAYLOAD / name, CLONE / name)
 
     run(
-        ["git", "add", "-A", "README.md", "SESSION_HANDOFF.md", "spaces", "stages/05_app"],
+        ["git", "add", "-A", "README.md", "SESSION_HANDOFF.md", "render.yaml", "spaces", "stages/05_app"],
         cwd=CLONE,
         env=env,
     )

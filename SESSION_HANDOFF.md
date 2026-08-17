@@ -1,6 +1,6 @@
 # SESSION HANDOFF — SoccerDL (Bayesian World Cup Prediction)
 
-Prepared: 2026-08-15. **Last handoff update: 2026-08-17 (GitHub release pushed; local app live; HF hosting blocked by account plan).**
+Prepared: 2026-08-15. **Last handoff update: 2026-08-17 (Render port patch validated; local app live; GitHub sync pending).**
 **Read this first in a new session.** Repo: `D:\SoccerDeepLearning`.
 Source of truth: public GitHub `batestguy/soccer-eurovsSA`. Runtime: Google Colab driven by the
 official `colab` CLI from WSL Ubuntu.
@@ -16,7 +16,7 @@ official `colab` CLI from WSL Ubuntu.
 | 02 Priors + prior predictive | DONE | `9bb5c48` | `data/prior.nc`, `gp_prior.nc`, `prior_model_frame.csv`, `prior_predictive_*.png`, `prior_predictive_report.md` |
 | 03 Posterior + GP trend | DONE | `4850e00` | `data/posterior.nc`, `gp_posterior_{conf}.nc` (×6), `gp_posterior_trends.png`, `posterior_trace.png`, `posterior_report.md`, `posterior_diagnostics.{md,csv}` |
 | 04 Monte Carlo Oracle + do() | DONE | `fc4ca47` | `data/monte_carlo_results.csv`, `do_contrast.csv`, `sim_field_2026.csv`, `monte_carlo_barchart.png`, `do_contrast.png`, `simulation_config.json`, `stage04_report.md` |
-| 05 Gradio app | **GitHub release pushed; local app live; HF hosting blocked by plan.** Final 8-tab app, static Space bundle, and no-refit release gate are complete. Local browser test covered all tabs/control types; 11-figure render gate passed. | `c32e742` | `stages/05_app/app.py`, `validate_release.py`, `release_stage05.py`; byte-identical `spaces/app.py`; 19 static serving artifacts; updated Space README. Authenticated as `JBZABC`; create-Space returned HTTP 402 because hosted Gradio/Docker on `cpu-basic` requires PRO. |
+| 05 Gradio app | **Render-ready; local app live; GitHub sync pending.** Final 8-tab app, static serving bundle, no-refit release gate, and Render `$PORT` binding are complete. | pending | `stages/05_app/app.py`, `validate_release.py`, `release_stage05.py`, `render.yaml`; byte-identical `spaces/app.py`; 19 static serving artifacts. HF create-Space returned HTTP 402 because hosted Gradio/Docker on `cpu-basic` requires PRO. |
 
 Stage scripts are preserved under `stages/<NN>_<name>/<script>.py` **on GitHub** (provenance copies
 pushed by each stage; sizes are nonzero).
@@ -233,14 +233,17 @@ Spec as executed:
 5. ✅ Local browser gate → all eight tabs opened; period, continent, parameter, region, Top-N,
    prior/posterior, C1-C4, and ranking-threshold controls exercised. Evidence is under
    `output/playwright/` locally. Gradio produced only two missing-local-font 404s; no backend errors.
-6. ⚠️ HF Spaces deploy under `JBZABC` → **BLOCKED by the account plan, not credentials.** Local
+6. ✅ Render Free preparation → `render.yaml` now builds with `pip install -r spaces/requirements.txt` and
+   starts `python spaces/app.py`; both app copies honor Render's assigned `$PORT` and bind to `0.0.0.0`.
+   A temporary local `PORT=7861` smoke test returned HTTP 200. Deploying from the public GitHub repo still
+   requires a Render account authorization in the Render dashboard. HF Spaces deploy under `JBZABC` →
+   **BLOCKED by the account plan, not credentials.** Local
    `hf auth whoami` confirms `JBZABC`; `create_repo(..., space_sdk="gradio")` returned HTTP 402 with
    the service message that hosted Gradio/Docker Spaces on free `cpu-basic` require PRO. The account
    owns no existing Space that can be updated. The exact release is live locally at
    `http://127.0.0.1:7860` (PID 18380 at handoff time): HTTP 200, correct title, all eight tabs.
    Browser console has only the two known optional-font 404s plus harmless Gradio argument warnings.
-   After upgrading the account, rerun the `HfApi.create_repo` + `upload_folder` deployment and smoke-test
-   the public URL; no refit or artifact rebuild is needed.
+   No refit or artifact rebuild is needed for Render or HF.
 
 ### Guardrails (unchanged)
 Distributions-not-points everywhere; DAG labels "associational / counterfactual, not causal";

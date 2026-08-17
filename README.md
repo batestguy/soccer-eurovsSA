@@ -19,7 +19,7 @@ never this local folder.
 | 02 | Priors + prior predictive checks |
 | 03 | Hierarchical posterior + GP trend |
 | 04 | Monte Carlo Oracle + do()-contrast |
-| 05 | Eight-tab Gradio release pushed at `c32e742`; local app verified at `http://127.0.0.1:7860`; HF rejected Gradio Space creation with HTTP 402 because `JBZABC` is not on PRO |
+| 05 | Eight-tab Gradio release validated locally; Render Free manifest is ready (`render.yaml`); HF hosting was rejected with HTTP 402 because `JBZABC` is not on PRO |
 
 ## How a stage runs
 Each stage is a self-contained script the agent executes on a Colab VM via

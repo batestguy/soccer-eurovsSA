@@ -15,7 +15,7 @@
 # Inference is DECOUPLED from serving: the app only loads pre-trained
 # artifacts (.nc / CSV) — it never runs MCMC at runtime.
 #
-# Run:  python app.py            -> launches the Gradio UI on :7860
+# Run:  python app.py            -> launches the Gradio UI on $PORT or :7860
 #       python app.py --render   -> writes tab figures to out/ (gate check)
 # Artifacts are read from <script_dir>/data or $SOCCERDL_DATA.
 # =====================================================================
@@ -690,4 +690,7 @@ if __name__ == "__main__":
         render_all(args.out or "rendered")
     else:
         import gradio as gr  # imported here so --render works without gradio
-        build_app().launch(server_name="0.0.0.0", server_port=7860)
+        build_app().launch(
+            server_name="0.0.0.0",
+            server_port=int(os.environ.get("PORT", "7860")),
+        )
