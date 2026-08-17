@@ -1,6 +1,6 @@
 # SESSION HANDOFF — SoccerDL (Bayesian World Cup Prediction)
 
-Prepared: 2026-08-15. **Last handoff update: 2026-08-17 (Render port patch validated; local app live; GitHub sync pending).**
+Prepared: 2026-08-15. **Last handoff update: 2026-08-17 (Render port patch validated; Render-ready bundle synced to GitHub; deployment awaits account authorization).**
 **Read this first in a new session.** Repo: `D:\SoccerDeepLearning`.
 Source of truth: public GitHub `batestguy/soccer-eurovsSA`. Runtime: Google Colab driven by the
 official `colab` CLI from WSL Ubuntu.
@@ -16,7 +16,7 @@ official `colab` CLI from WSL Ubuntu.
 | 02 Priors + prior predictive | DONE | `9bb5c48` | `data/prior.nc`, `gp_prior.nc`, `prior_model_frame.csv`, `prior_predictive_*.png`, `prior_predictive_report.md` |
 | 03 Posterior + GP trend | DONE | `4850e00` | `data/posterior.nc`, `gp_posterior_{conf}.nc` (×6), `gp_posterior_trends.png`, `posterior_trace.png`, `posterior_report.md`, `posterior_diagnostics.{md,csv}` |
 | 04 Monte Carlo Oracle + do() | DONE | `fc4ca47` | `data/monte_carlo_results.csv`, `do_contrast.csv`, `sim_field_2026.csv`, `monte_carlo_barchart.png`, `do_contrast.png`, `simulation_config.json`, `stage04_report.md` |
-| 05 Gradio app | **Render-ready; local app live; GitHub sync pending.** Final 8-tab app, static serving bundle, no-refit release gate, and Render `$PORT` binding are complete. | pending | `stages/05_app/app.py`, `validate_release.py`, `release_stage05.py`, `render.yaml`; byte-identical `spaces/app.py`; 19 static serving artifacts. HF create-Space returned HTTP 402 because hosted Gradio/Docker on `cpu-basic` requires PRO. |
+| 05 Gradio app | **Render-ready; local app live; GitHub synced; Render deployment pending account authorization.** Final 8-tab app, static serving bundle, no-refit release gate, and Render `$PORT` binding are complete. | `1d6bfdb` | `stages/05_app/app.py`, `validate_release.py`, `release_stage05.py`, `render.yaml`; byte-identical `spaces/app.py`; 19 static serving artifacts. HF create-Space returned HTTP 402 because hosted Gradio/Docker on `cpu-basic` requires PRO. |
 
 Stage scripts are preserved under `stages/<NN>_<name>/<script>.py` **on GitHub** (provenance copies
 pushed by each stage; sizes are nonzero).
