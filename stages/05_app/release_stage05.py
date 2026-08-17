@@ -86,7 +86,8 @@ def validate_payload() -> None:
         if path.is_file() and (
             path.name.lower() == "githubtoken.txt"
             or "gp_lens" in path.name.lower()
-            or path.suffix.lower() in {".pem", ".key"}
+            or "__pycache__" in {part.lower() for part in path.parts}
+            or path.suffix.lower() in {".pem", ".key", ".pyc"}
         )
     ]
     if forbidden:
