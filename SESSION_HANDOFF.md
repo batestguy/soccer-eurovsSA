@@ -1,6 +1,6 @@
 # SESSION HANDOFF — SoccerDL (Bayesian World Cup Prediction)
 
-Prepared: 2026-08-15. **Last handoff update: 2026-08-17 (GitHub release pushed; HF token pending).**
+Prepared: 2026-08-15. **Last handoff update: 2026-08-17 (GitHub release pushed; local app live; HF hosting blocked by account plan).**
 **Read this first in a new session.** Repo: `D:\SoccerDeepLearning`.
 Source of truth: public GitHub `batestguy/soccer-eurovsSA`. Runtime: Google Colab driven by the
 official `colab` CLI from WSL Ubuntu.
@@ -16,7 +16,7 @@ official `colab` CLI from WSL Ubuntu.
 | 02 Priors + prior predictive | DONE | `9bb5c48` | `data/prior.nc`, `gp_prior.nc`, `prior_model_frame.csv`, `prior_predictive_*.png`, `prior_predictive_report.md` |
 | 03 Posterior + GP trend | DONE | `4850e00` | `data/posterior.nc`, `gp_posterior_{conf}.nc` (×6), `gp_posterior_trends.png`, `posterior_trace.png`, `posterior_report.md`, `posterior_diagnostics.{md,csv}` |
 | 04 Monte Carlo Oracle + do() | DONE | `fc4ca47` | `data/monte_carlo_results.csv`, `do_contrast.csv`, `sim_field_2026.csv`, `monte_carlo_barchart.png`, `do_contrast.png`, `simulation_config.json`, `stage04_report.md` |
-| 05 Gradio app | **GitHub release pushed; HF deploy pending token.** Final 8-tab app, static Space bundle, and no-refit release gate are complete. Local browser test covered all tabs/control types; 11-figure render gate passed. | `c32e742` | `stages/05_app/app.py`, `validate_release.py`, `release_stage05.py`; byte-identical `spaces/app.py`; 19 static serving artifacts; updated Space README. HF account target: `JBZABC` (write token not present in CLI/env). |
+| 05 Gradio app | **GitHub release pushed; local app live; HF hosting blocked by plan.** Final 8-tab app, static Space bundle, and no-refit release gate are complete. Local browser test covered all tabs/control types; 11-figure render gate passed. | `c32e742` | `stages/05_app/app.py`, `validate_release.py`, `release_stage05.py`; byte-identical `spaces/app.py`; 19 static serving artifacts; updated Space README. Authenticated as `JBZABC`; create-Space returned HTTP 402 because hosted Gradio/Docker on `cpu-basic` requires PRO. |
 
 Stage scripts are preserved under `stages/<NN>_<name>/<script>.py` **on GitHub** (provenance copies
 pushed by each stage; sizes are nonzero).
@@ -146,7 +146,7 @@ Spec as executed:
 
 **v1 status:** built locally (6 tabs, not deployed). GP machinery **DROPPED** in the final plan
 (`build_gp_grid.py` and `gp_lens_grid.csv` removed). HF bundle in `spaces/`. HF user `JBZABC`
-(Space + write token pending).
+(authenticated; hosted Gradio Space creation blocked by the account's non-PRO plan).
 
 **Session 2026-08-16 — everything done so far (detail in the checklist below):**
 1. ✅ `build_strength.py` pushed `c1347cb` (sampling settled on **numpyro 4 chains × 400 draws**,
@@ -165,7 +165,9 @@ Spec as executed:
    explicitly deterministic/descriptive; obsolete GP-lens packaging is absent.
 5. ✅ `Analysis_Report.pdf` (9 pages, layman-friendly, table-heavy) written to the repo root — local
    deliverable, not pushed.
-6. ⏳ HF Spaces deploy under `JBZABC` awaits a secure write token.
+6. ⚠️ Authenticated as `JBZABC`, but HF rejected Gradio Space creation with HTTP 402: hosted
+   Gradio/Docker on free `cpu-basic` requires PRO. The identical app is running locally at
+   `http://127.0.0.1:7860` (PID 18380 at handoff time).
 
 ### Final app layout — 8 tabs
 | # | Tab | Status |
@@ -231,9 +233,14 @@ Spec as executed:
 5. ✅ Local browser gate → all eight tabs opened; period, continent, parameter, region, Top-N,
    prior/posterior, C1-C4, and ranking-threshold controls exercised. Evidence is under
    `output/playwright/` locally. Gradio produced only two missing-local-font 404s; no backend errors.
-6. ⏳ HF Spaces deploy under `JBZABC` → **BLOCKED only on the missing write token.** Neither
-   Windows nor WSL has an HF CLI login or `HF_TOKEN`/`HUGGINGFACE_HUB_TOKEN` environment value.
-   Once supplied securely, deploy `spaces/`, smoke-test the public URL, then commit this handoff update.
+6. ⚠️ HF Spaces deploy under `JBZABC` → **BLOCKED by the account plan, not credentials.** Local
+   `hf auth whoami` confirms `JBZABC`; `create_repo(..., space_sdk="gradio")` returned HTTP 402 with
+   the service message that hosted Gradio/Docker Spaces on free `cpu-basic` require PRO. The account
+   owns no existing Space that can be updated. The exact release is live locally at
+   `http://127.0.0.1:7860` (PID 18380 at handoff time): HTTP 200, correct title, all eight tabs.
+   Browser console has only the two known optional-font 404s plus harmless Gradio argument warnings.
+   After upgrading the account, rerun the `HfApi.create_repo` + `upload_folder` deployment and smoke-test
+   the public URL; no refit or artifact rebuild is needed.
 
 ### Guardrails (unchanged)
 Distributions-not-points everywhere; DAG labels "associational / counterfactual, not causal";
