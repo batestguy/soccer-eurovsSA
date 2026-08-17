@@ -1,0 +1,6 @@
+gradio==5.23.1
+arviz==0.23.0
+matplotlib==3.9.2
+numpy==2.0.2
+pandas==2.2.2
+netcdf4==1.7.2
