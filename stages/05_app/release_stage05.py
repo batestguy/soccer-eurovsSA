@@ -27,6 +27,8 @@ CLONE = Path("/content/soccerdl_stage05_release_repo")
 OUT = Path("/content/soccerdl_out")
 
 REQUIRED = [
+    "README.md",
+    "SESSION_HANDOFF.md",
     "spaces/app.py",
     "spaces/README.md",
     "spaces/requirements.txt",
@@ -156,14 +158,19 @@ def main() -> None:
         "validate_release.py", "release_stage05.py",
     ]:
         shutil.copy2(PAYLOAD / "stages" / "05_app" / name, remote_stage / name)
+    for name in ["README.md", "SESSION_HANDOFF.md"]:
+        shutil.copy2(PAYLOAD / name, CLONE / name)
 
-    run(["git", "add", "-A", "spaces", "stages/05_app"], cwd=CLONE, env=env)
+    run(
+        ["git", "add", "-A", "README.md", "SESSION_HANDOFF.md", "spaces", "stages/05_app"],
+        cwd=CLONE,
+        env=env,
+    )
     status = run(["git", "status", "--short"], cwd=CLONE, env=env, capture=True).stdout.strip()
     if not status:
         raise RuntimeError("release produced no Git changes")
     run(
-        ["git", "commit", "-m",
-         "stage 05 release: eight-tab Gradio app (static artifacts, no refit)"],
+        ["git", "commit", "-m", "stage 05 release: sync static app bundle and handoff"],
         cwd=CLONE,
         env=env,
         capture=True,
