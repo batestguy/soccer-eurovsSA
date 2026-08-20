@@ -86,13 +86,13 @@ free `cpu-basic` plan returned HTTP 402 and require PRO.
 
 ## Project Documentation
 
-- `Briefing.txt` - product specification and modeling philosophy
-- `ENVIRONMENTS.md` - machine and environment reference
-- `AGENTS.md` - stage execution contract and security rules
-- `CLAUDE.md` - repository conventions and model details
 - `SESSION_HANDOFF.md` - current stage status, model state, and gotchas
 - [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) - live deployment runbook
 - `stages/05_app/README_SPACES.md` - serving bundle documentation
+- `spaces/README.md` - published serving-bundle metadata and limitations
+
+Local-only workspace guides are not included in the public release: `Briefing.txt`,
+`ENVIRONMENTS.md`, `AGENTS.md`, and `CLAUDE.md`.
 
 ## Stage Pipeline
 
