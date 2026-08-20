@@ -19,7 +19,7 @@ never this local folder.
 | 02 | Priors + prior predictive checks |
 | 03 | Hierarchical posterior + GP trend |
 | 04 | Monte Carlo Oracle + do()-contrast |
-| 05 | Eight-tab Gradio release validated locally; Render Free manifest is ready (`render.yaml`); HF hosting was rejected with HTTP 402 because `JBZABC` is not on PRO |
+| 05 | Eight-tab Gradio release validated locally and live on Render at https://bayesian-world-cup-prediction.onrender.com; HF hosting was rejected with HTTP 402 because `JBZABC` is not on PRO |
 
 ## How a stage runs
 Each stage is a self-contained script the agent executes on a Colab VM via
