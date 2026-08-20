@@ -107,4 +107,5 @@ Local-only workspace guides are not included in the public release: `Briefing.tx
 
 Stages 00-04 and the model-building jobs run on Google Colab VMs driven from the terminal
 through the official `colab` CLI in WSL. The public GitHub repository is the source of truth;
-Colab VMs are ephemeral. See `AGENTS.md` and `SESSION_HANDOFF.md` for the full gate protocol.
+Colab VMs are ephemeral. See `SESSION_HANDOFF.md` for the published stage status and release
+notes; local execution and security rules remain in the workspace-only guides.
