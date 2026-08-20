@@ -86,8 +86,9 @@ ImportError: No module named 'h5py', backend not available. Please install 'h5py
 ```
 
 This affected the Forest Plot, Prior Predictive, and Causal tabs. The fix pins
-`h5py==3.12.1` in both requirements files. A redeploy must be verified by exercising
-those NetCDF-backed tabs, not only by checking the root page health check.
+`h5py==3.12.1` in both requirements files. The fix was redeployed and verified by
+exercising those NetCDF-backed tabs; the callbacks returned successful queue responses
+and Render logs showed no further `h5py` errors.
 
 ## Local Validation
 

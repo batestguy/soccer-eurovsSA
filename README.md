@@ -15,7 +15,7 @@ precomputed posterior artifacts, a 50,000-simulation Monte Carlo Oracle, counter
 The first Render deploy built successfully but failed at startup because Gradio imported
 `requests` and it was not included in the release requirements. After that fix, interactive
 NetCDF-backed tabs also required the `h5py` backend. The release pins `requests==2.32.3`
-and `h5py==3.12.1`; the deployment is being reverified across all tabs.
+and `h5py==3.12.1`; the live deployment has been reverified across all tabs.
 
 ## What the App Shows
 

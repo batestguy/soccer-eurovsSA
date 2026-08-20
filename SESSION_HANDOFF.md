@@ -16,7 +16,7 @@ official `colab` CLI from WSL Ubuntu.
 | 02 Priors + prior predictive | DONE | `9bb5c48` | `data/prior.nc`, `gp_prior.nc`, `prior_model_frame.csv`, `prior_predictive_*.png`, `prior_predictive_report.md` |
 | 03 Posterior + GP trend | DONE | `4850e00` | `data/posterior.nc`, `gp_posterior_{conf}.nc` (×6), `gp_posterior_trends.png`, `posterior_trace.png`, `posterior_report.md`, `posterior_diagnostics.{md,csv}` |
 | 04 Monte Carlo Oracle + do() | DONE | `fc4ca47` | `data/monte_carlo_results.csv`, `do_contrast.csv`, `sim_field_2026.csv`, `monte_carlo_barchart.png`, `do_contrast.png`, `simulation_config.json`, `stage04_report.md` |
-| 05 Gradio app | **LIVE on Render; tab callback fix in progress.** Final 8-tab app, static serving bundle, no-refit release gate, Render `$PORT` binding, and pinned startup dependencies are complete. | `main` / `d6db8b7` app release | `stages/05_app/app.py`, `validate_release.py`, `release_stage05.py`, `render.yaml`; byte-identical `spaces/app.py`; 19 static serving artifacts. Public URL: https://bayesian-world-cup-prediction.onrender.com. HF create-Space returned HTTP 402 because hosted Gradio/Docker on `cpu-basic` requires PRO. |
+| 05 Gradio app | **LIVE on Render; all tab callbacks verified.** Final 8-tab app, static serving bundle, no-refit release gate, Render `$PORT` binding, and pinned startup dependencies are complete. | `main` / `523c30f` application release | `stages/05_app/app.py`, `validate_release.py`, `release_stage05.py`, `render.yaml`; byte-identical `spaces/app.py`; 19 static serving artifacts. Public URL: https://bayesian-world-cup-prediction.onrender.com. HF create-Space returned HTTP 402 because hosted Gradio/Docker on `cpu-basic` requires PRO. |
 
 Stage scripts are preserved under `stages/<NN>_<name>/<script>.py` **on GitHub** (provenance copies
 pushed by each stage; sizes are nonzero).
@@ -238,7 +238,8 @@ Spec as executed:
    The first deploy exposed a missing transitive `requests` import in Gradio; pinned `requests==2.32.3`
    was added in `d6db8b7`. Interactive callbacks then exposed a missing `h5py` NetCDF backend;
    `h5py==3.12.1` is now pinned in both requirements files. The fixed application deployment is
-   **LIVE**; documentation-only
+   **LIVE**; Forest Plot, Prior Predictive, and Causal NetCDF callbacks were reverified without
+   `h5py` errors. Documentation-only
    commits continue to deploy automatically from `main`. The public URL
    returned HTTP 200 with all eight tabs. Browser console has only the known optional `manifest.json`
    and font 404s plus harmless Gradio argument warnings. HF Spaces remains blocked by the account plan.
