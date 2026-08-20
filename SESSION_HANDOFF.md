@@ -144,7 +144,7 @@ Spec as executed:
 
 ## 6. Stage 05 — Gradio app: FINAL PLAN (LOCKED 2026-08-16)
 
-**v1 status:** built locally (6 tabs, not deployed). GP machinery **DROPPED** in the final plan
+**Historical v1 status:** built locally as a 6-tab app. GP machinery **DROPPED** in the final plan
 (`build_gp_grid.py` and `gp_lens_grid.csv` removed). HF bundle in `spaces/`. HF user `JBZABC`
 (authenticated; hosted Gradio Space creation blocked by the account's non-PRO plan).
 

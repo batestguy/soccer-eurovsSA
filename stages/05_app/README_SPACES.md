@@ -3,10 +3,14 @@ title: Bayesian World Cup Prediction
 sdk: gradio
 sdk_version: 5.23.1
 app_file: app.py
-python_version: 3.12
+python_version: 3.11
 ---
 
 # Bayesian World Cup Prediction
+
+**Live demo:** https://bayesian-world-cup-prediction.onrender.com
+
+**Source:** https://github.com/batestguy/soccer-eurovsSA
 
 Eight-lens decision-support app for a retrospective pre-tournament replay of the
 2026 World Cup. Serving is static and lightweight: the Space only loads
@@ -24,6 +28,20 @@ precomputed NetCDF/CSV/PNG artifacts and never runs MCMC or model fitting.
 - Four DAG assumption checks
 - Ranking Dynamics: deterministic descriptive SES fits and a 12-month scenario
   forecast for top-5/top-10/top-20 composition
+
+## Release
+
+This bundle is deployed on Render Free with Python 3.11.11. Render runs
+`python spaces/app.py`, binds the assigned `$PORT` on `0.0.0.0`, and serves only
+the precomputed files in `spaces/data/`. It never runs MCMC or model fitting.
+
+The startup dependency `requests==2.32.3` is pinned because Gradio 5.23.1 imports
+`requests` through its CLI module during application startup. The public release
+was fixed in commit `d6db8b7` and the current live documentation commit is
+`d43e021`.
+
+For deployment commands and failure diagnosis, see the repository
+[`docs/DEPLOYMENT.md`](https://github.com/batestguy/soccer-eurovsSA/blob/main/docs/DEPLOYMENT.md).
 
 ## Limitations
 
