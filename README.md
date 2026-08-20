@@ -13,8 +13,9 @@ precomputed posterior artifacts, a 50,000-simulation Monte Carlo Oracle, counter
 - **Runtime:** Render Free, Python 3.11.11, static precomputed artifacts, no runtime MCMC
 
 The first Render deploy built successfully but failed at startup because Gradio imported
-`requests` and it was not included in the release requirements. The pinned dependency
-`requests==2.32.3` was added in `d6db8b7`; the subsequent deployment is live.
+`requests` and it was not included in the release requirements. After that fix, interactive
+NetCDF-backed tabs also required the `h5py` backend. The release pins `requests==2.32.3`
+and `h5py==3.12.1`; the deployment is being reverified across all tabs.
 
 ## What the App Shows
 

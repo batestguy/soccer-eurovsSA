@@ -35,10 +35,10 @@ This bundle is deployed on Render Free with Python 3.11.11. Render runs
 `python spaces/app.py`, binds the assigned `$PORT` on `0.0.0.0`, and serves only
 the precomputed files in `spaces/data/`. It never runs MCMC or model fitting.
 
-The startup dependency `requests==2.32.3` is pinned because Gradio 5.23.1 imports
-`requests` through its CLI module during application startup. The public release
-was fixed in commit `d6db8b7`. Documentation is maintained on `main` and deploys
-automatically with the service.
+The startup dependencies `requests==2.32.3` and `h5py==3.12.1` are pinned because
+Gradio 5.23.1 imports `requests` through its CLI module and ArviZ needs the `h5py`
+backend to read the NetCDF artifacts. The release fixes are maintained on `main` and
+deploy automatically with the service.
 
 For deployment commands and failure diagnosis, see the repository
 [`docs/DEPLOYMENT.md`](https://github.com/batestguy/soccer-eurovsSA/blob/main/docs/DEPLOYMENT.md).

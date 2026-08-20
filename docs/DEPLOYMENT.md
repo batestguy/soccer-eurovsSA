@@ -8,7 +8,8 @@
 - Render service ID: `srv-da17uktbedkc73c99sd0`
 - Workspace: `My Workspace` (`tea-da17r17lk1mc739dlkb0`)
 - Branch: `main`
-- Application dependency fix: `d6db8b7`
+- Application startup fix: `d6db8b7` (`requests==2.32.3`)
+- NetCDF callback fix: current `main` release (`h5py==3.12.1`)
 - First successful application deploy: `dep-da366c9srm7s7390mf4g`
 
 The current deployment follows the latest commit on `main`. Query its exact commit,
@@ -76,6 +77,17 @@ requests==2.32.3
 
 Commit `d6db8b7` deployed successfully. Later documentation-only commits also
 deploy successfully without changing the application artifacts.
+
+After the initial deployment, Render logs exposed a second issue when interactive
+callbacks tried to read `posterior.nc` and `prior.nc`:
+
+```text
+ImportError: No module named 'h5py', backend not available. Please install 'h5py'
+```
+
+This affected the Forest Plot, Prior Predictive, and Causal tabs. The fix pins
+`h5py==3.12.1` in both requirements files. A redeploy must be verified by exercising
+those NetCDF-backed tabs, not only by checking the root page health check.
 
 ## Local Validation
 
