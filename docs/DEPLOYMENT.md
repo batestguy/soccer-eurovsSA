@@ -8,9 +8,12 @@
 - Render service ID: `srv-da17uktbedkc73c99sd0`
 - Workspace: `My Workspace` (`tea-da17r17lk1mc739dlkb0`)
 - Branch: `main`
-- Live documentation commit: `d43e021`
 - Application dependency fix: `d6db8b7`
-- Live Render deploy: `dep-da369hj7uimc73bd6e9g`
+- First successful application deploy: `dep-da366c9srm7s7390mf4g`
+
+The current deployment follows the latest commit on `main`. Query its exact commit,
+deploy ID, and status with `render deploys list`; documentation-only commits are
+also deployed automatically.
 
 The service is a Render Free Python web service. It serves the static Gradio bundle
 under `spaces/`, including precomputed CSV, NetCDF, Markdown, and PNG artifacts.
@@ -71,8 +74,8 @@ added this line to both requirements files:
 requests==2.32.3
 ```
 
-Commit `d6db8b7` deployed successfully. The later documentation commit `d43e021`
-also deployed successfully and is the current live commit.
+Commit `d6db8b7` deployed successfully. Later documentation-only commits also
+deploy successfully without changing the application artifacts.
 
 ## Local Validation
 

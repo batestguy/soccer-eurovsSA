@@ -9,7 +9,7 @@ precomputed posterior artifacts, a 50,000-simulation Monte Carlo Oracle, counter
 - **App:** https://bayesian-world-cup-prediction.onrender.com
 - **Source:** https://github.com/batestguy/soccer-eurovsSA
 - **Render service:** https://dashboard.render.com/web/srv-da17uktbedkc73c99sd0
-- **Current live commit:** `d43e021` (documentation update; application fix is in `d6db8b7`)
+- **Application release commit:** `d6db8b7`; documentation updates deploy automatically from `main`
 - **Runtime:** Render Free, Python 3.11.11, static precomputed artifacts, no runtime MCMC
 
 The first Render deploy built successfully but failed at startup because Gradio imported
