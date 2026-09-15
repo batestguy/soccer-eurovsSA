@@ -1,23 +1,48 @@
 # Soccer Deep Learning - Bayesian World Cup Prediction
 
-Bayesian decision-support app for football. It combines hierarchical PyMC inference,
-precomputed posterior artifacts, a 50,000-simulation Monte Carlo Oracle, counterfactual
-`do()` simulations, and an eight-tab Gradio interface.
+[![Live app](https://img.shields.io/badge/live%20app-Render-46e3b7?logo=render&logoColor=white)](https://bayesian-world-cup-prediction.onrender.com)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![PyMC](https://img.shields.io/badge/model-PyMC-0F766E)](https://www.pymc.io/)
 
-## Live Release
+An uncertainty-first Bayesian decision-support app for football. It combines hierarchical PyMC
+inference, descriptive confederation strength trends, precomputed posterior artifacts, a
+50,000-simulation Monte Carlo Oracle, counterfactual `do()` simulations, and an eight-tab Gradio
+interface.
 
-- **App:** https://bayesian-world-cup-prediction.onrender.com
-- **Source:** https://github.com/batestguy/soccer-eurovsSA
-- **Render service:** https://dashboard.render.com/web/srv-da17uktbedkc73c99sd0
-- **Application release commit:** `d6db8b7`; documentation updates deploy automatically from `main`
-- **Runtime:** Render Free, Python 3.11.11, static precomputed artifacts, no runtime MCMC
+The project is called "Soccer Deep Learning," but the modeling core deliberately uses Bayesian
+statistical learning rather than a black-box neural network: the dataset contains only 22 World
+Cups, so partial pooling and transparent uncertainty are more appropriate than an oversized deep
+model.
 
-The first Render deploy built successfully but failed at startup because Gradio imported
-`requests` and it was not included in the release requirements. After that fix, interactive
-NetCDF-backed tabs also required the `h5py` backend. The release pins `requests==2.32.3`
-and `h5py==3.12.1`; the live deployment has been reverified across all tabs.
+## Live release
 
-## What the App Shows
+Try the public app: **[bayesian-world-cup-prediction.onrender.com](https://bayesian-world-cup-prediction.onrender.com)**
+
+The Render release serves a self-contained bundle of precomputed artifacts. It loads instantly and
+never runs MCMC or model fitting at request time.
+
+## Screenshots
+
+<table>
+<tr>
+<td width="50%"><img src="docs/screenshots/continental-strength.png" alt="Continental strength trends with 90 percent uncertainty bands"></td>
+<td width="50%"><img src="docs/screenshots/forest-plot.png" alt="Posterior forest plot with uncertainty intervals"></td>
+</tr>
+<tr>
+<td align="center"><b>Continental strength</b></td>
+<td align="center"><b>Posterior forest plot</b></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/screenshots/monte-carlo.png" alt="Monte Carlo World Cup winner probabilities with 90 percent intervals"></td>
+<td width="50%"><img src="docs/screenshots/ranking-dynamics.png" alt="Descriptive ranking dynamics and deterministic 12 month scenario extension"></td>
+</tr>
+<tr>
+<td align="center"><b>50,000-simulation Monte Carlo Oracle</b></td>
+<td align="center"><b>Ranking dynamics</b></td>
+</tr>
+</table>
+
+## What the app shows
 
 | Tab | Purpose |
 |---|---|
@@ -28,24 +53,35 @@ and `h5py==3.12.1`; the live deployment has been reverified across all tabs.
 | Prior Predictive | Comparison of model beliefs before and after the observed data |
 | Causal: Continent to Winner | DAG, structural effects, and identification caveat |
 | DAG Assumption Tests | Four checks for confounding, independence, sensitivity, and balance |
-| Ranking Dynamics | Descriptive top-5/top-10/top-20 composition with SES and 12-month scenario forecast |
+| Ranking Dynamics | Descriptive top-5/top-10/top-20 composition with SES and a 12-month scenario extension |
 
-## Modeling Guardrails
+## Headline replay
+
+The retrospective 2026 field replay produced these simulation summaries:
+
+- Spain: **20.8%** chance of winning
+- Argentina: **14.2%**
+- France: **6.9%**
+- Brazil: **5.9%**
+- Ecuador: **4.9%**
+- UEFA: **52.2%** confederation win probability
+
+These are distributions from a model replay, not certainties or claims about the actual match
+result.
+
+## Modeling guardrails
 
 - Outputs are distributions with intervals or error bars, never point-only predictions.
 - The winner model uses hierarchical pooling across 22 World Cups.
-- The latent team-strength path prevents identification of a causal champion effect.
+- The latent team-strength path means the continental-champion effect is not causally identifiable.
 - `do()` results are counterfactual simulations, not estimated causal effects.
-- Ranking Dynamics is deterministic descriptive SES, not a Bayesian forecast.
-- Inference is decoupled from serving. Render never runs MCMC or model fitting.
+- Ranking Dynamics is deterministic descriptive simple exponential smoothing, not a Bayesian forecast.
+- Heavy inference is decoupled from serving; the live app uses static artifacts only.
 
-Headline 2026 retrospective replay: Spain 20.8%, Argentina 14.2%, and UEFA 52.2%
-confederation win probability. These are simulation summaries, not certainties.
+## Run locally
 
-## Run Locally
-
-The serving bundle is self-contained under `spaces/` and reads only the 19 static artifacts
-under `spaces/data/`.
+The serving bundle is self-contained under `spaces/` and reads the static artifacts under
+`spaces/data/`.
 
 ```powershell
 conda run -n causality-handbook python spaces\app.py
@@ -58,7 +94,7 @@ $env:PORT = "7861"
 conda run -n causality-handbook python spaces\app.py
 ```
 
-## Release Validation
+## Release validation
 
 Run the no-refit release gate from the Bayesian analysis environment:
 
@@ -66,36 +102,31 @@ Run the no-refit release gate from the Bayesian analysis environment:
 conda run -n causality-handbook python stages\05_app\validate_release.py --report output\stage05_release_validation.json
 ```
 
-The gate checks schemas, probability sums, interval ordering, 416 monthly strength periods,
-139 quarterly periods, 35 annual periods, 15 pairwise comparisons, all eight tabs, 11 rendered
-figures, app parity, and absence of runtime fitting code.
+The gate checks schemas, probability sums, interval ordering, 416 monthly strength periods, 139
+quarterly periods, 35 annual periods, 15 pairwise comparisons, all eight tabs, rendered figures,
+app parity, and the absence of runtime fitting code.
 
 ## Deployment
 
-Render is configured by `render.yaml`:
+Render is configured by [`render.yaml`](render.yaml):
 
 - Build: `pip install -r spaces/requirements.txt`
 - Start: `python spaces/app.py`
 - Health check: `/`
-- Port: the app binds `0.0.0.0` and Render's assigned `$PORT`
+- Binding: `0.0.0.0` on Render's assigned `$PORT`
 
-See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for the CLI workflow, failure diagnosis,
-verification evidence, and recovery commands.
+See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for the deployment workflow, failure diagnosis,
+verification evidence, and recovery commands. HF Spaces is unavailable for the current account's
+free plan because hosted Gradio/Docker Spaces require PRO.
 
-HF Spaces remains unavailable for this account because hosted Gradio/Docker Spaces on the
-free `cpu-basic` plan returned HTTP 402 and require PRO.
+## Project documentation
 
-## Project Documentation
-
-- `SESSION_HANDOFF.md` - current stage status, model state, and gotchas
+- [`SESSION_HANDOFF.md`](SESSION_HANDOFF.md) - current stage status, model state, and gotchas
 - [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) - live deployment runbook
-- `stages/05_app/README_SPACES.md` - serving bundle documentation
-- `spaces/README.md` - published serving-bundle metadata and limitations
+- [`stages/05_app/README_SPACES.md`](stages/05_app/README_SPACES.md) - serving bundle documentation
+- [`spaces/README.md`](spaces/README.md) - published serving-bundle metadata and limitations
 
-Local-only workspace guides are not included in the public release: `Briefing.txt`,
-`ENVIRONMENTS.md`, `AGENTS.md`, and `CLAUDE.md`.
-
-## Stage Pipeline
+## Stage pipeline
 
 | Stage | Output |
 |---|---|
@@ -106,7 +137,11 @@ Local-only workspace guides are not included in the public release: `Briefing.tx
 | 04 | Monte Carlo Oracle and `do()` contrast |
 | 05 | Eight-tab static Gradio release, Render deployment, and public browser verification |
 
-Stages 00-04 and the model-building jobs run on Google Colab VMs driven from the terminal
-through the official `colab` CLI in WSL. The public GitHub repository is the source of truth;
-Colab VMs are ephemeral. See `SESSION_HANDOFF.md` for the published stage status and release
-notes; local execution and security rules remain in the workspace-only guides.
+Stages 00-04 and the model-building jobs run on Google Colab VMs driven from the terminal through
+the official `colab` CLI in WSL. The public GitHub repository is the source of truth; Colab VMs are
+ephemeral. Local execution and security rules remain in the workspace-only guides.
+
+## License
+
+No license has been declared yet. Please open an issue before reusing the code or artifacts in a
+redistributed product.
