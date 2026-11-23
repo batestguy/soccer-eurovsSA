@@ -143,5 +143,6 @@ ephemeral. Local execution and security rules remain in the workspace-only guide
 
 ## License
 
-No license has been declared yet. Please open an issue before reusing the code or artifacts in a
-redistributed product.
+Code is MIT licensed — see [LICENSE](LICENSE). The datasets, figures and derived
+artefacts are not covered by that licence; their upstream terms are set out in
+[NOTICE.md](NOTICE.md).
