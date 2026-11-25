@@ -21,6 +21,17 @@ Try the public app: **[bayesian-world-cup-prediction.onrender.com](https://bayes
 The Render release serves a self-contained bundle of precomputed artifacts. It loads instantly and
 never runs MCMC or model fitting at request time.
 
+## Video walkthrough
+
+**[Watch or download the walkthrough (3:23, 1080p MP4)](https://github.com/batestguy/soccer-eurovsSA/raw/refs/heads/main/docs/demo/soccer-app-walkthrough.mp4)**
+
+Follow the clicks through all eight tabs, with full-size charts and captions. The walkthrough
+shows how to compare confederations, read the uncertainty ranges in the 50,000-run replay, and
+test the model's assumptions. At **3:08**, it explains how precomputed results and release checks
+helped turn the model into a public app.
+
+Soundtrack: “Silver Shadow” by Atlantic Starr.
+
 ## Screenshots
 
 <table>
@@ -44,16 +55,16 @@ never runs MCMC or model fitting at request time.
 
 ## What the app shows
 
-| Tab | Purpose |
-|---|---|
-| Continental Strength | Hierarchical log-Elo trends, A/B comparison, 90% bands, and differences |
-| Forest Plot | Posterior distributions for champion effect, confederation offset, and Elo coefficient |
-| Monte Carlo | 50,000 simulated 2026 World Cups with winner probabilities and intervals |
-| do()-What-If | Champion-status counterfactual simulation, not a causal estimate |
-| Prior Predictive | Comparison of model beliefs before and after the observed data |
-| Causal: Continent to Winner | DAG, structural effects, and identification caveat |
-| DAG Assumption Tests | Four checks for confounding, independence, sensitivity, and balance |
-| Ranking Dynamics | Descriptive top-5/top-10/top-20 composition with SES and a 12-month scenario extension |
+| Tab | Purpose | Video time |
+|---|---|---|
+| Continental Strength | Hierarchical log-Elo trends, A/B comparison, 90% bands, and differences | 0:05 |
+| Forest Plot | Posterior distributions for champion effect, confederation offset, and Elo coefficient | 0:34 |
+| Monte Carlo | 50,000 simulated 2026 World Cups with winner probabilities and intervals | 0:54 |
+| do()-What-If | Champion-status counterfactual simulation, not a causal estimate | 1:18 |
+| Prior Predictive | Comparison of model beliefs before and after the observed data | 1:31 |
+| Causal: Continent to Winner | DAG, structural effects, and identification caveat | 1:49 |
+| DAG Assumption Tests | Four checks for confounding, independence, sensitivity, and balance | 2:10 |
+| Ranking Dynamics | Descriptive top-5/top-10/top-20 composition with SES and a 12-month scenario extension | 2:46 |
 
 ## Headline replay
 
